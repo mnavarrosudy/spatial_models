@@ -1,10 +1,12 @@
 
-
 function solve_armington_eq(σ, τ, A, L, a, tol = 1e-5, damp = .1)
+    # the equilibrium is defined by two sets of equations: (1) the wages w, and (2) the expenditure shares λ
     w, λ  = ones(size(A)), zeros(size(a))
     wage_error = 1e5
     while wage_error > tol
+        # initialize denominator of 
         denominator, wL = zeros(size(A)), zeros(size(A))
+        # iterate over 
         for k in eachindex(A)
             denominator .+= a[k,:] .* (τ[k,:] * w[k] / A[k]).^(1 .- σ)
         end
@@ -21,20 +23,13 @@ function solve_armington_eq(σ, τ, A, L, a, tol = 1e-5, damp = .1)
     return w, λ
 end
 
-τ = [1. 5; 5. 1.]; 
-a = [1. 1.; 1. 1.];
-A = [1., 1.];
-L = [1., 1.];
-σ = 2.;
-w, λ = solve_armington_eq(σ, τ, A, L, a);
-display(w)
-display(λ)
+# parameters for 2 regions
+τ = [1. 5; 5. 1.] # iceberg trade cost
+a = [1. 1.; 1. 1.] # taste parameter
+A = [1., 1.] # productivity
+L = [1., 1.] # labor endowment
+σ = 2. # elasticity of substitution
 
-τ = [1. 5; 5. 1.]; 
-a = [1. 1.; 1. 1.];
-A = [10., 1.];
-L = [1., 1.];
-σ = 2.;
 w, λ = solve_armington_eq(σ, τ, A, L, a);
 display(w)
 display(λ)
