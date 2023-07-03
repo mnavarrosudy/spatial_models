@@ -1,6 +1,13 @@
 using Pkg
 Pkg.add("ZipFile")
-using ZipFile
+Pkg.add("LinearAlgebra")
+Pkg.add("Images")
+Pkg.add("JLD2")
+Pkg.add("StatsBase")
+Pkg.add("Optim")
+Pkg.add("DelimitedFiles")
+
+using ZipFile, LinearAlgebra, Images, JLD2, StatsBase, Optim, DelimitedFiles
 
 function unzip(file, exdir="")
     fileFullPath = isabspath(file) ?  file : joinpath(pwd(),file)
