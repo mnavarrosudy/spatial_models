@@ -83,6 +83,5 @@ println(serverid) #the stuff that is in file we read
 cd(base_path)
 
 mc_path = joinpath(base_path, "code", "run_mc_iterations.jl")
-#mc_path = joinpath(base_path, "code", "mc_simulation.jl")
 
 include(mc_path)
