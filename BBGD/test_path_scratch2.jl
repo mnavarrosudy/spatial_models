@@ -31,7 +31,7 @@ deploy_url = "https://github.com/mnavarrosudy/spatial_models/raw/main/BBGD/deplo
 if Sys.iswindows()
 	serverid = "WB_mtlb_3"
     download(deploy_url, "D:\\wb610020\\BBGD\\deploy.zip")
-    rm("D:\\wb610020\\BBGD\\deploy", force = true)
+    rm("D:\\wb610020\\BBGD\\deploy", force = true, recursive = true)
     unzip("D:\\wb610020\\BBGD\\deploy.zip", "D:\\wb610020\\BBGD")
 	#base_path = "D:/WBS/BBGD/deploy"
     base_path = "D:\\wb610020\\BBGD\\deploy"
