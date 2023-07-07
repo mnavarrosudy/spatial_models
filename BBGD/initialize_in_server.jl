@@ -2,16 +2,19 @@
 using Pkg
 
 # Install or update necessary packages
-Pkg.add("ZipFile")
-Pkg.add("LinearAlgebra")
-Pkg.add("Images")
-Pkg.add("JLD2")
-Pkg.add("StatsBase")
-Pkg.add("Optim")
-Pkg.add("DelimitedFiles")
+#Pkg.add("ZipFile")
+#Pkg.add("LinearAlgebra")
+#Pkg.add("Images")
+#Pkg.add("JLD2")
+#Pkg.add("StatsBase")
+#Pkg.add("Optim")
+#Pkg.add("DelimitedFiles")
+#Pkg.add("Graphs")
+#Pkg.add("GraphRecipes")
+#Pkg.add("Plots")
 
 # Initialize necessary packages
-using ZipFile, LinearAlgebra, Images, JLD2, StatsBase, Optim, DelimitedFiles
+using ZipFile, LinearAlgebra, Images, JLD2, StatsBase, Optim, DelimitedFiles, Graphs, GraphRecipes, Plots
 
 # Define a function to unzip a file in Julia.
 function unzip(file, exdir="")
