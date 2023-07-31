@@ -1,0 +1,25 @@
+# Notes on optimization algorithms in Julia
+Several packages provide optimization tools in Julia. The most widely used are Optim.jl, JuMP.jl, BlackBoxOptim.jl, and NLopt.jl.
+
+## Optim.jl
+Focuses primarily on unconstrained optimization, with some support for box-constrained problems. The inclusion of constraints cannot be implemented exactly, but it is possible to use a penalty function method to discipline the optimization procedure.
+
+## JuMP.jl 
+Algebraic modeling language for mathematical optimization embedded in Julia. It focuses on constrained optimization and supports a broad range of problem types. However, JuMP is less suitable when: (i) the objective function is complex, or (ii) the objective is non-differentiable.
+
+## BlackBoxOptim.jl 
+Focuses on global optimization using heuristic and stochastic algorithms that do not require a differentiable objective function. It does not support the inclusion of constraints, but this drawback can be ameliorated through using a penalty function method.
+
+## NLopt.jl 
+Provides a common interface to various optimization algorithms for: (i) global and local optimization, (ii) derivative-free objectives, (iii) unconstrained and bound-constrained problems, and (iv) general nonlinear inequality/equality constraints.
+For NLopt.jl, we have explored two main families of algorithms: (a) Local derivative-free optimization, and (b) Local gradient-based optimization.
+
+Within the family (a), there are the following algorithms: COBYLA (Constrained Optimization BY Linear Approximations), BOBYQA, NEWUOA + bound constraints, PRAXIS (PRincipal AXIS), Nelder-Mead Simplex, and Sbplx (based on Sbplx). Among these algorithms, COBYLA is the only one that supports nonlinear inequality and equality constraints.
+
+Within the family (b), there are the following algorithms: MMA (Method of Moving Asymptotes), SLSQP, Low-storage BFGS, Preconditioned truncated Newton, and Shifted limited-memory variable-metric. Among these algorithms, only MMA and SLSQP support arbitrary nonlinear constraints, and only SLSQP supports nonlinear equality constraints. The rest supports bound-constrained or unconstrained problems.
+
+When the optimization involves a fairly complex objective function or there is no direct access to the analytic formula of the objective function’s gradient, there are two ways to provide gradients to these algorithms: (i) Automatic differentiation, and (ii) Finite differences.
+
+For automatic differentiation, there are packages such as ForwardDiff.jl, Flux.jl, and NLSolverBase.jl. For finite differences, NLSolverBase.jl provides an option to compute numerical gradients.  
+
+NLopt.jl also supports the Augmented Lagrangian algorithm. This method combines the objective function and the nonlinear inequality/equality constraints into a single function: the objective plus a “penalty” for any violated constraints. This modified objective function is then passed to another optimization algorithm with no nonlinear constraints. This algorithm can be used in combination with any of the local gradient-based optimization methods.
