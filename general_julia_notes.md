@@ -27,7 +27,10 @@
 
 # Introduction to types
 
-- [] 
+- [Parametric types](https://julia.quantecon.org/getting_started_julia/introduction_to_types.html#parametric-types)
+- [The type hierarchy](https://julia.quantecon.org/getting_started_julia/introduction_to_types.html#the-type-hierarchy)
+- [Good practices for functions and variable types](https://julia.quantecon.org/getting_started_julia/introduction_to_types.html#good-practices-for-functions-and-variable-types)
+- [Tips for writing generic functions](https://julia.quantecon.org/getting_started_julia/introduction_to_types.html#tips-and-tricks-for-writing-generic-functions)
 
 - [Learning Julia](https://julialang.org/learning/)
 - [QuantEcon Julia Lectures](https://julia.quantecon.org/intro.html)
