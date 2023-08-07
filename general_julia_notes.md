@@ -1,7 +1,10 @@
 # Download and Install Julia
 
-- [Julia Download](https://julialang.org/downloads/)
-- [Julia: How to install](https://julia.quantecon.org/getting_started_julia/getting_started.html#install-julia)
+- [Julia: How to download and install](https://julia.quantecon.org/getting_started_julia/getting_started.html#install-julia)
+
+# Download and Install an Integrated Development Environment (IDE) for Julia
+
+- [Visual Studio Code: How to download and install](https://julia.quantecon.org/software_engineering/tools_editors.html#visual-studio-code-and-other-tools)
 
 # Starting with Julia
 
