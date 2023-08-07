@@ -2,12 +2,14 @@
 
 - [Julia: How to download and install](https://julia.quantecon.org/getting_started_julia/getting_started.html#install-julia)
 
-# Download and Install an Integrated Development Environment (IDE) for Julia
+# Download and Install an IDE for Julia
 
 - [Visual Studio Code: How to download and install](https://julia.quantecon.org/software_engineering/tools_editors.html#visual-studio-code-and-other-tools)
 
 # Starting with Julia
 
+- [Managing Packages](https://pkgdocs.julialang.org/v1/managing-packages/#Managing-Packages)
+   - [Complementary info: `Project.toml` and `Manifest.toml`](https://pkgdocs.julialang.org/v1/toml-files/#Project-and-Manifest)
 - [Learning Julia](https://julialang.org/learning/)
 - [QuantEcon Julia Lectures](https://julia.quantecon.org/intro.html)
 
