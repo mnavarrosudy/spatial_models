@@ -1,6 +1,7 @@
-# Download Julia
+# Download and Install Julia
 
 - [Julia Download](https://julialang.org/downloads/)
+- [Julia: How to install](https://julia.quantecon.org/getting_started_julia/getting_started.html#install-julia)
 
 # Starting with Julia
 
