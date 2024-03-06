@@ -27,6 +27,8 @@ From macOS
 ```
 curl -LO https://github.com/mnavarrosudy/spatial_models/raw/main/BBGD/toy_model_pkg.zip
 ```
+    
+- Note: `curl` does not follow HTTP redirections by default, so we tell `curl` to do so using the -L/--location option.
 
 4. Unzip the folder by running the following:
 
